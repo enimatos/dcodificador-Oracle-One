@@ -1,0 +1,275 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Maven+Pro:wght@400..900&display=swap');
+
+:root{
+    --cor-primaria:#ccd7ee;
+    --cor-secundaria:#1b034a;
+    --cor-terciaria:#ffffff;
+    --cor_hover:#f2f0e9;
+
+    --fonte_principal:"Fira Sans", sans-serif;;
+    --fonte_secundaria:"Maven Pro", sans-serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+body{
+    box-sizing: border-box;
+    background-color:var(--cor-primaria);
+    font-size: 1.1rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.nome{
+    position: fixed;
+    top: 2%;
+    left: 3%;
+    
+}
+.logo{  
+    
+    font-size: 10rem;
+    margin: 0;
+    padding: 0;
+    color: var(--cor-secundaria);
+}
+
+p{
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: var(--fonte_secundaria);
+    font-size: 1rem;
+}
+main{
+    height:100%;
+    width: 1500px;
+    display: flex;
+    justify-content:center;
+    margin: 2%;
+    gap: 5%
+}
+
+.controle{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    margin-bottom: 3%;
+    justify-content: space-between;
+}
+.imagem{
+    width: 130px;
+    height: 150px;
+}
+
+
+
+
+.cript_decript{
+    width: 700px;
+    height: 70%;    
+    /* padding: 3%; */
+    margin-top: 180px;
+    background-color: none;
+    border: none;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.aviso{
+    text-align: start;
+    font-size: 1.3rem;
+}
+.resultado{
+    width: 350px;
+    height: 87%;
+    margin-top: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    font-size: 1rem;
+    align-items: center;
+}
+
+#txt_entrada{
+    padding-top: 20px;
+    background-color: transparent;
+    width: 80%;
+    height: 80%;
+    border: none;
+    border-radius: 15px;
+    text-align: justify;
+    padding-left: 20px 10px;
+    font-size: 2.5rem;
+    color: var(--cor-secundaria);
+
+}
+#txt_saida{
+    padding: 20px 10px 10px 10px;
+    width: 90%;
+    height: 78%;
+    border: none;
+    border-radius: 20px;
+    text-align: justify;
+    font-size: 1.3rem;
+    background-image: url(/assets/imagem_busca2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.botoes{
+    width: 100%;
+    display: flex;
+    gap:10px;
+    justify-content: space-around;
+}
+
+.botoes_saida{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    display: none;
+}
+
+button{
+    border-radius: 50px;
+    font-size: 1.5rem;
+    height: 50px;
+    color: var(--cor-secundaria);
+    width: 300px;
+    cursor: pointer;
+}
+
+.btn_criptografa{
+    color: var(--cor-terciaria);
+    background-color: #1b034a;
+}
+
+
+@media (max-width: 1050px) {
+    main{
+        height: 95%;
+    }
+    .controle{
+        flex-wrap: wrap;
+    }
+
+    .cript_decript{
+        width: 95%;
+        height: 57%;    
+        margin-top: 220px;
+        align-items: center;
+    }
+
+    #txt_entrada{
+        padding-top: 20px;
+        width: 100%;
+        height: 80%;
+        padding-left: 20px 10px;
+        font-size: 2.5rem;
+        color: var(--cor-secundaria);
+    }
+
+    .resultado{
+        width: 95%;
+        height: 17%;
+        border-radius: 20px;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3%;
+        
+
+    }
+    
+    #txt_saida{
+        padding-top: 20px;
+        height: 80%;
+        border: none;
+        background-image: url(/assets/texto_busca.png);
+  
+    }
+
+    .botoes_saida{
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-around;
+ 
+    }
+
+    button{
+        border-radius: 50px;
+        font-size: 1.5rem;
+        height: 50px;
+        color: var(--cor-secundaria);
+        width: 45%;
+        cursor: pointer;
+    }
+
+
+}
+@media (max-width: 900px) {
+    .controle{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .cript_decript{
+        width: 90%;
+        height: 40%;    
+        margin-top: 180px;
+        align-items: center;
+    }
+
+    .resultado{
+        width: 90%;
+        height: 35%;
+        border-radius: 20px;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+    }
+    
+    #txt_saida{
+        padding-top: 20px;
+        height: 80%;
+        border: none;
+  
+    }
+
+    .botoes_saida{
+        flex-direction: row;
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .cript_decript{
+        width: auto;
+        height: 70%;    
+
+    }
+    .resultado{
+        height: auto;
+
+    }
+
+}
