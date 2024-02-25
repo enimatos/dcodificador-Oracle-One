@@ -1,13 +1,9 @@
 const campoEntrada = document.querySelector("#txt_entrada")
-const campoSaida = document.querySelector("#txt_saida")
+const campoSaida = document.querySelector(".txt_saida")
 const btnLimpar = document.getElementsByClassName("btn_limpar")
 
-function carregar(){
-    campoSaida.value = "Teseteseseses"
-    let aux = campoSaida.value
-    document.querySelector(".resultado").innerHTML = `<textarea id="txt_saida" > ${aux}</textarea>`
-}
 function criptografar(){
+
     let texto = campoEntrada.value;
 
     let resultado = texto.replace(/a/g, "8=§").replace(/b/g, "H4r").replace(/c/g,"#det")
@@ -17,9 +13,8 @@ function criptografar(){
     .replace(/s/g,"!1").replace(/t/g,"5Y").replace(/u/g,"o#L").replace(/v/g,"oBa").replace(/w/g,"vish")
     .replace(/x/g,"gi}").replace(/y/g,"Qu°").replace(/z/g,"9f")
     
-    document.querySelector(".resultado").innerHTML = `<textarea id="txt_saida" > ${resultado}</textarea>
-    <p class="aviso">Apenas letras minúsculas e sem acento.</p>
-    <div class="botoes">
+    document.querySelector(".resultado").innerHTML = `<textarea readonly class="txt_saida" > ${resultado}</textarea>
+    <div class="botoes_saida" style="display:flex">
         <button class="btn_copiar" onclick="copiar()">Copiar</button>
         <button class="btn_limpar" onclick="limpar()">Limpar</button>
     </div>`
@@ -28,7 +23,7 @@ function criptografar(){
 }
 
 function descriptografar(){
-    let texto = campoEntrada.value;
+    let texto = campoEntrada.value;;
 
     let resultadoDescriptografado = texto.replace(/8=§/g,"a").replace(/H4r/g,"b").replace(/#det/g,"c")
     .replace(/S%/g, "d").replace(/#V/g, "e").replace(/@A/g,"f").replace(/<7>/g,"g").replace(/\//g,"h")
@@ -36,9 +31,9 @@ function descriptografar(){
     .replace(/Uend/g,"n").replace(/Te%a/g,"o").replace(/mD3/g,"p").replace(/ke&/g,"q").replace(/¨e5/g,"r")
     .replace(/!1/g,"s").replace(/5Y/g,"t").replace(/o#L/g,"u").replace(/oBa/g,"v").replace(/vish/g,"w")
     .replace(/gi}/g,"x").replace(/Qu°/g,"y").replace(/9f/g,"z")
-    
-    document.querySelector(".resultado").innerHTML = `<textarea id="txt_saida" > ${resultadoDescriptografado}</textarea>
-    <div class="botoes">
+
+    document.querySelector(".resultado").innerHTML = `<textarea readonly class="txt_saida" > ${resultadoDescriptografado}</textarea>
+    <div class="botoes_saida" style="display:flex">
         <button class="btn_copiar" onclick="copiar()">Copiar</button>
         <button class="btn_limpar" onclick="limpar()">Limpar</button>
     </div>`
@@ -47,8 +42,7 @@ function descriptografar(){
 
 
 function copiar(){
-    let textoCopiado = document.getElementById("txt_saida");
-
+    let textoCopiado = document.querySelector(".txt_saida");
     textoCopiado.select();
     document.execCommand('copy');
     alert("Texto copiado.");
@@ -56,12 +50,12 @@ function copiar(){
 }
 
 function limpar(){
-    let teste = campoSaida.value
-    document.querySelector(".resultado").innerHTML = `<textarea id="txt_saida" > ${teste}</textarea>
-    <p>Seu codigo está aqui</p>
-    <div class="botoes">
-        <button class="btn_copiar" onclick="copiar()">Copiar</button>
-        <button class="btn_limpar" onclick="limpar()">Limpar</button>
+    campoEntrada.value = ""
+    document.querySelector(".resultado").innerHTML = `<textarea class="txt_saida"></textarea>
+    <img src="/assets/imagem_busca.png" alt="" class="imagem_busca">
+    <div class="frases">
+        <p class="negrito">Nenhuma mensagem encontrada</p>
+        <p class="normal">Digite um texto que você deseja criptografar ou descriptografar.</p>
     </div>`
     ;
  }

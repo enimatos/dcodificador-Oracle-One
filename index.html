@@ -12,25 +12,30 @@
         <div class="nome">
             <p class="logo">a</p>
         </div>
-        <div class="controle">
-            <section class="cript_decript">
-                <textarea id="txt_entrada"  placeholder="Digite aqui seu texo"></textarea>
+        <section class="cript_decript">
+            <textarea id="txt_entrada" placeholder="Digite seu texto"></textarea>
+            <div class="icone">
                 <p class="aviso">Apenas letras minúsculas e sem acento.</p>
-                <div class="botoes">           
-                    <button class="btn_criptografa" onclick="criptografar()">Criptografar</button>
-                    <button class="btn_descriptografa" onclick="descriptografar()">Descriptografar</button>
+            </div>
+            <div class="botoes">           
+                <button class="btn_criptografa" onclick="criptografar()">Criptografar</button>
+                <button class="btn_descriptografa" onclick="descriptografar()">Descriptografar</button>
+            </div>
+        </section>
+        <section class="resultado">
+            <div class="txt_saida">
+                <img src="/assets/imagem_busca.png" alt="" class="imagem_busca">
+                <div class="frases">
+                    <p class="negrito">Nenhuma mensagem encontrada</p>
+                    <p class="normal">Digite um texto que você deseja criptografar ou descriptografar.</p>
                 </div>
-            </section>
-            <section class="resultado">
-                <textarea id="txt_saida"></textarea>
                 <div class="botoes_saida">
                     <button class="btn_copiar" onclick="copiar()">Copiar</button>
                     <button class="btn_limpar" onclick="limpar()">Limpar</button>
                 </div>
-                
-            </section>
-        </main>
-        </div>
-        
+            </div>
+        </section>
+    </main>
+   
 </body>
 </html>
