@@ -1,9 +1,15 @@
 const campoEntrada = document.querySelector("#txt_entrada")
 const campoSaida = document.querySelector(".txt_saida")
 const btnLimpar = document.getElementsByClassName("btn_limpar")
+const main = document.querySelector(".main")
+const secao = document.querySelector(".resultado")
+const botoesSaida = document.querySelector(".botoes_saida")
+const largura = window.screen.width;
+const frases = document.querySelector(".frases")
+
+
 
 function criptografar(){
-
     let texto = campoEntrada.value;
 
     let resultado = texto.replace(/a/g, "8=§").replace(/b/g, "H4r").replace(/c/g,"#det")
@@ -13,10 +19,26 @@ function criptografar(){
     .replace(/s/g,"!1").replace(/t/g,"5Y").replace(/u/g,"o#L").replace(/v/g,"oBa").replace(/w/g,"vish")
     .replace(/x/g,"gi}").replace(/y/g,"Qu°").replace(/z/g,"9f")
     
-    document.querySelector(".resultado").innerHTML = `<textarea readonly class="txt_saida" > ${resultado}</textarea>
+    
+    if(largura > 1439){
+        main.style.height = "1024px"
+        secao.style.height = "944px"
+        //campoSaida.style.height = "180px"
+    }else if(largura > 400){
+        main.style.height = "1174px"
+        secao.style.height = "343px"
+        //campoSaida.style.height = "180px"
+        // 
+    }else{
+        main.style.height = "1715px"
+        secao.style.height = "595px"
+      
+        
+    }
+    document.querySelector(".resultado").innerHTML = `<textarea readonly class="txt_saida" style="text-align:justify"> ${resultado}</textarea>
     <div class="botoes_saida" style="display:flex">
-        <button class="btn_copiar" onclick="copiar()">Copiar</button>
-        <button class="btn_limpar" onclick="limpar()">Limpar</button>
+        <button class="btn_copiar" onclick="copiar()" style="width:100%">Copiar</button>
+        <button class="btn_limpar" onclick="limpar()" style="width:100%">Limpar</button>
     </div>`
     ;
 
@@ -32,10 +54,25 @@ function descriptografar(){
     .replace(/!1/g,"s").replace(/5Y/g,"t").replace(/o#L/g,"u").replace(/oBa/g,"v").replace(/vish/g,"w")
     .replace(/gi}/g,"x").replace(/Qu°/g,"y").replace(/9f/g,"z")
 
-    document.querySelector(".resultado").innerHTML = `<textarea readonly class="txt_saida" > ${resultadoDescriptografado}</textarea>
+    if(largura > 1439){
+        main.style.height = "1024px"
+        secao.style.height = "944px"
+        //campoSaida.style.height = "180px"
+    }else if(largura > 400){
+        main.style.height = "1174px"
+        secao.style.height = "343px"
+        //campoSaida.style.height = "180px"
+        // 
+    }else{
+        main.style.height = "1715px"
+        secao.style.height = "595px"
+      
+        
+    }
+    document.querySelector(".resultado").innerHTML = `<textarea readonly class="txt_saida" style="text-align:justify"> ${resultadoDescriptografado}</textarea>
     <div class="botoes_saida" style="display:flex">
-        <button class="btn_copiar" onclick="copiar()">Copiar</button>
-        <button class="btn_limpar" onclick="limpar()">Limpar</button>
+        <button class="btn_copiar" onclick="copiar()" style="width:100%">Copiar</button>
+        <button class="btn_limpar" onclick="limpar()" style="width:100%">Limpar</button>
     </div>`
     ;
 }
@@ -51,6 +88,21 @@ function copiar(){
 
 function limpar(){
     campoEntrada.value = ""
+
+    if(largura > 1439){
+        secao.style.height = "944px"
+    }else if (largura > 450){
+        main.style.height = "1174px"
+        secao.style.height = "186px"
+        //campoSaida.style.height = "180px"
+        // 
+    }else{
+        main.style.height = "1715px"
+        secao.style.height = "133px"
+        frases.style.position = "initial;"
+    
+
+    }
     document.querySelector(".resultado").innerHTML = `<textarea class="txt_saida"></textarea>
     <img src="/assets/imagem_busca.png" alt="" class="imagem_busca">
     <div class="frases">

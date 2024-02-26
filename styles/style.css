@@ -25,33 +25,24 @@ body{
 
 }
 
-.nome{
-    position: fixed;
-    top: 2%;
-    left: 3%;
-    
-}
 .logo{  
-    
-    font-size: 10rem;
-    margin: 0;
-    padding: 0;
-    color: var(--cor-secundaria);
+    position: fixed;
+    width: 31.09px;
+    height: 46.37px;
+    top: 73.42px;
+    left: 44px;
 }
 
-main{
+.main{
     height: 1024px;
     width: 1440px;
     top: 622px;
     left: -2277px;
 }
 
-.imagem{
-    width: 130px;
-    height: 150px;
-}
-
 .frases{
+    display: flex;
+    flex-direction: column;
     position: fixed;
     width: 336px;
     height: 122px;
@@ -62,7 +53,6 @@ main{
 }
 
 .negrito{
-    position:fixed;
     width: 336px;
     height: 58px;
     font-weight: 700;
@@ -74,7 +64,6 @@ main{
 
 .normal{
     color: var(--cor_quarta);
-    position: fixed;
     width: 336px;
     height: 48px;
     font-weight: 400;
@@ -145,10 +134,11 @@ main{
 
 }
 .txt_saida{
-    width: 90%;
+    width: 85%;
     height: 75%;
     padding: 25px;
     border: none;
+    position: initial;
     font-size: 24px;
     color: var(--cor_quarta);
     font-weight: 400;
@@ -165,7 +155,7 @@ main{
     gap: 24px;
     display: flex;
     justify-content: center;
-}
+    }
 
 .botoes_saida{
     width: 100%;
@@ -190,57 +180,87 @@ button{
 }
 
 
-@media(max-width: 800px) {
 
-    main{
+@media(max-width: 1000px) {
+
+    .main{
         width: 768px;
         height: 1174px;
         top:2024px;
         left: -2277px;
     }
 
-    .txt_entrada{
-        width: 688px;
+    .logo{  
+        position: fixed;
+        width: 31.09px;
+        height: 46.37px;
+        top: 73.42px;
+        left: 40px;
+    }
+
+    .imagem_busca{
+        display: none;
+    }
+    .cript_decript{
+        width: 680px;
+        height: 600px;
         top: 240px;
-        left:40px
+        left: 40px;
+    }
+
+    #txt_entrada{
+        /* width: 680px; */
+        height: 85%;
+        font-size: 32px;
+        padding: 20px, 2px;
+        line-height: 48px;
+        text-wrap:wrap;
     }
     .resultado{
+        display: flex;
+        flex-direction: column;
         position: fixed;
         width: 688px;
         height: 133px;
-        top: 1001px;
+        top: 960px;
         left: 40px;
         border-radius: 32px;
-        padding: 32px;
         gap: 32px;
         background-color: var(--cor-terciaria);
-        
+      
 
     }
     
     .txt_saida{
-        padding-top: 20px;
-        height: 80%;
+        height: 90%;
         border: none;
+        width: 93%;
+        border-radius: 32px;
+        left: 40px;
         
     }
 
 
     .frases{
-        display: flex;
-        flex-direction: column;
+        display: grid;
         width: 624px;
         height: 69px;
+        left: 40px;
+        top: 1001px;
         gap: 16px;
+        position: fixed;
     }
     .negrito{
+        position: initial;
         width: 624px;
         height: 29px;
         font-weight: 700;
     }
 
     .normal{
+        position: initial;
         width: 624px;
+        height: 24px;
         font-weight: 400;
 
     }
@@ -249,12 +269,18 @@ button{
         width: 688px;
         height: 67px;
         top: 870px;
-        left: 40;
+        left: 40px;
         gap: 24px;
+    }
+
+    .icone{
+        top: 836px;
+        left: 40px;
+        gap: 8px;
     }
     .botoes_saida{
         gap: 10px;
-        justify-content: space-around;
+ 
  
     }
 
@@ -269,51 +295,90 @@ button{
 
 
 }
-@media (max-width: 600px) {
-    main{
-        width: max-content;
+@media (max-width: 450px) {
+    .main{
+        padding: 3px;
+        width: 375px;
+        height: 933px;
+        top: 3588px;
+        left: -2277px;
     }
-    .controle{
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+
 
     .cript_decript{
-        width: 90%;
-        height: 60%;    
-        margin-top: 250px;
-        align-items: center;
+        width: 343px;
+        height: 530px;
+        top: 152px;
+        left: 16px;
+        
     }
 
-    .resultado{
+    #txt_entrada{
         width: 90%;
-        height: 10%;
-        border-radius: 20px;
-        font-size: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-
-    }
-    
-    .txt_saida{
-        padding-top: 20px;
-        height: 40%;
-        border: none;
-        background-image: url(/assets/texto_busca.png);
-        background-size: 100%;
-  
+        height: 60%;
     }
 
     .botoes{
-       flex-direction: column;
-       width: 90%;
+        flex-direction: column;
+        align-items: center;
+        width: 343px;
+        height: 158px;
+        position: inherit;
+        top: 530px;
+        left: 16px;
+        gap: 24px;
+    }
+
+    .icone{
+        width: 252px;
+        height: 18px;
+        top: 510px;
+        gap: 8px;
+    }
+
+    .resultado{
+        width: 327px;
+        height: 196px;
+        border-radius: 20px;
+        top: 707px;
+        left: 24px;
+        gap: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .frases{
+        position: fixed;
+        width: 263px;
+        height: 122px;
+        gap: 16px;
+        padding: 10px;
+        top: 700px;
+    }
+
+    .negrito{
+        width: 263px;
+        height: 58px;
+    }
+
+    .normal{
+        width: 263px;
+        height: 48px;
+    }
+    
+    .txt_saida{
+        width: 80%;
+        height: 70%;
+        
     }
 
     .botoes_saida{
-        flex-direction: row;
+        flex-direction: column;
         width: 90%;
+        height: min-content;
+        
     }
 
     button{
