@@ -5,6 +5,7 @@ const main = document.querySelector(".main")
 const secao = document.querySelector(".resultado")
 const botoesSaida = document.querySelector(".botoes_saida")
 const largura = window.screen.width;
+const body = document.querySelector(".tela")
 const frases = document.querySelector(".frases")
 
 
@@ -23,17 +24,15 @@ function criptografar(){
     if(largura > 1439){
         main.style.height = "1024px"
         secao.style.height = "944px"
-        //campoSaida.style.height = "180px"
+ 
     }else if(largura > 400){
         main.style.height = "1174px"
         secao.style.height = "343px"
-        //campoSaida.style.height = "180px"
-        // 
+
     }else{
         main.style.height = "1715px"
         secao.style.height = "595px"
-      
-        
+   
     }
     document.querySelector(".resultado").innerHTML = `<textarea readonly class="txt_saida" style="text-align:justify"> ${resultado}</textarea>
     <div class="botoes_saida" style="display:flex">
@@ -57,17 +56,17 @@ function descriptografar(){
     if(largura > 1439){
         main.style.height = "1024px"
         secao.style.height = "944px"
-        //campoSaida.style.height = "180px"
-    }else if(largura > 400){
+
+    }
+    if(largura > 400){
         main.style.height = "1174px"
         secao.style.height = "343px"
-        //campoSaida.style.height = "180px"
-        // 
-    }else{
+
+    }
+    if (largura < 401){
         main.style.height = "1715px"
         secao.style.height = "595px"
       
-        
     }
     document.querySelector(".resultado").innerHTML = `<textarea readonly class="txt_saida" style="text-align:justify"> ${resultadoDescriptografado}</textarea>
     <div class="botoes_saida" style="display:flex">
