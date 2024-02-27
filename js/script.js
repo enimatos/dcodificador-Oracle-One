@@ -7,12 +7,20 @@ const botoesSaida = document.querySelector(".botoes_saida")
 const largura = window.screen.width;
 const body = document.querySelector(".tela")
 const frases = document.querySelector(".frases")
-
+const matriz = ['uma', 'vez','era','voce']
+const alphabeto = ["abcdefghijklmnopqrdtuvwxyz"]
 
 
 function criptografar(){
     let texto = campoEntrada.value;
+    // let resultado = ''
 
+    // for (let i in texto){
+    //     if (texto[i] in alphabeto){
+    //         texto[i].replace(matriz[i])
+    //         console.log(texto[i])
+    //     }
+    // }
     let resultado = texto.replace(/a/g, "8=§").replace(/b/g, "Una").replace(/c/g,"J")
     .replace(/d/g,"<>").replace(/e/g,"#V").replace(/f/g,"@A").replace(/g/g,"<7>").replace(/h/g,"\/")
     .replace(/i/g,"%%").replace(/j/g,"enter").replace(/k/g,"ctr").replace(/l/g,"bº").replace(/m/g,"@!")
