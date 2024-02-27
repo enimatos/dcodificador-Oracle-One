@@ -25,28 +25,23 @@ body{
 }
 
 .logo{  
-    position: fixed;
     width: 31.09px;
     height: 46.37px;
-    top: 73.42px;
-    left: 44px;
 }
 
 .main{
-    height: 1024px;
-    width: 1440px;
-    top: 622px;
-    left: -2277px;
+    height: 100vh;
+    width: 1200px;
+    margin: 3% 15%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .frases{
     display: flex;
     flex-direction: column;
-    position: fixed;
     width: 336px;
     height: 122px;
-    top: 619px;
-    left: 1032px;
     gap: 16px;
     
 }
@@ -77,36 +72,30 @@ body{
 }
 
 .imagem_busca{
-    position:fixed;
     width: 336px;
     height: 304px;
-    top: 283px;
-    left: 1032px;
+
 }
 
 .cript_decript{
-    position: fixed;
-    width: 680px;
-    height: 900px;    
-    top: 168px;
-    left: 240px;
+    margin-top: 150px;
+    width: 700px;
+    height: 944px;    
     font-weight: 400;
     font-size: 32px;
     line-height: 48px;
     border: none;
+    display: flex;
+    flex-direction: column;
 
 }
 
 .icone{
-    position: fixed;
     width: 252px;
     height: 18px;
-    top: 851px;
-    left: 249px;
-    gap:8px;
+    padding: 15px 0;
 }
 .aviso{
-    position: fixed;
     width: 228px;
     height: 18px;
     opacity: 80%;
@@ -115,13 +104,14 @@ body{
     line-height: 18px;
 }
 .resultado{
-    position: fixed;
     width: 400px;
     height: 944px;
-    top: 40px;
-    left: 1000px;
     border-radius: 32px;
     background-color: var(--cor-terciaria);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -141,7 +131,6 @@ body{
     height: 75%;
     padding: 25px;
     border: none;
-    position: initial;
     font-size: 24px;
     color: var(--cor_quarta);
     font-weight: 400;
@@ -151,13 +140,10 @@ body{
 
 
 .botoes{
-    width: 680px;
-    position: fixed;
-    top: 885px;
-    left: 240px;
+    width: 100%;
     gap: 24px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between
     }
 
 .botoes_saida{
@@ -187,20 +173,19 @@ button{
 @media (max-width: 800px) {
 
     .main{
-        -webkit-overflow-scrolling: auto;
         width: 768px;
-        height: 933px;
-        top:2024px;
-        left: -2277px;
-        overflow-y: auto;
+        height: 1174px;
+        margin: 3% 5% 3% 5%;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 15px
     }
 
     .logo{  
-        position: fixed;
         width: 31.09px;
         height: 46.37px;
-        top: 73.42px;
-        left: 40px;
+
+
     }
 
     .imagem_busca{
@@ -208,9 +193,8 @@ button{
     }
     .cript_decript{
         width: 680px;
-        height: 400px;
-        top: 240px;
-        left: 40px;
+        height: 50%;
+        margin-top: 110px;
     }
 
     #txt_entrada{
@@ -224,11 +208,8 @@ button{
     .resultado{
         display: flex;
         flex-direction: column;
-        position: fixed;
         width: 688px;
         height: 133px;
-        top: 800px;
-        left: 40px;
         border-radius: 32px;
         gap: 32px;
         background-color: var(--cor-terciaria);
@@ -247,23 +228,18 @@ button{
 
 
     .frases{
-        display: grid;
         width: 624px;
         height: 69px;
-        left: 40px;
-        top: 830px;
         gap: 16px;
-        position: fixed;
+
     }
     .negrito{
-        position: initial;
         width: 624px;
         height: 29px;
         font-weight: 700;
     }
 
     .normal{
-        position: initial;
         width: 624px;
         height: 24px;
         font-weight: 400;
@@ -302,22 +278,18 @@ button{
 }
 @media (max-width: 400px) {
  
-    .main{
-        -webkit-overflow-scrolling: auto;
+    .main{      
         width: 375px;
-        height: 400px;
-        top: 3588px;
-        left: -2277px;
-        overflow-y: auto;
-    }
+        height: 933px;
+        gap:30px;
 
+    }
 
     .cript_decript{
         width: 343px;
         height: 530px;
-        top: 152px;
-        left: 16px;
-        
+        margin-top: 30px;
+
     }
 
     #txt_entrada{
@@ -334,26 +306,19 @@ button{
         align-items: center;
         width: 343px;
         height: 158px;
-        position: inherit;
-        top: 530px;
-        left: 16px;
         gap: 24px;
     }
 
     .icone{
         width: 252px;
         height: 18px;
-        top: 510px;
-        left: 32px;
         gap: 8px;
     }
 
     .resultado{
-        width: 327px;
+        width: 343px;
         height: 196px;
         border-radius: 20px;
-        top: 707px;
-        left: 24px;
         gap: 32px;
         display: flex;
         flex-direction: column;
@@ -362,13 +327,11 @@ button{
     }
 
     .frases{
-        position: fixed;
         width: 263px;
         height: 122px;
         gap: 16px;
         padding: 30px 10px;
-        top: 700px;
-        left: 32px;
+
     }
 
     .negrito{
