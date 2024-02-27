@@ -24,10 +24,12 @@ function criptografar(){
     if(largura > 1439){
         main.style.height = "1024px"
         secao.style.height = "944px"
+        
  
     }else if(largura > 400){
         main.style.height = "1174px"
         secao.style.height = "343px"
+        body.style.overflowY = "scroll"
 
     }else{
         main.style.height = "1715px"
@@ -59,8 +61,10 @@ function descriptografar(){
 
     }
     if(largura > 400){
-        main.style.height = "1174px"
+        main.style.height = "1400px"
+        main.style.overflowY = "scroll"
         secao.style.height = "343px"
+
 
     }
     if (largura < 401){
