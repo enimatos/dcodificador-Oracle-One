@@ -26,14 +26,18 @@ function criptografar(){
         secao.style.height = "944px"
         
  
-    }else if(largura > 400){
-        main.style.height = "1174px"
+    }
+    if(largura > 400){
+        main.style.height = "1024px"
+        main.style.overflow = "auto"
         secao.style.height = "343px"
-        body.style.overflowY = "scroll"
+        // body.style.overflowY = "scroll"
 
-    }else{
-        main.style.height = "1715px"
+    }
+    if (largura < 401){
+        // main.style.height = "1715px"
         secao.style.height = "595px"
+        main.style.overflow = "scroll"
    
     }
     document.querySelector(".resultado").innerHTML = `<textarea readonly class="txt_saida" style="text-align:justify"> ${resultado}</textarea>
@@ -61,7 +65,7 @@ function descriptografar(){
 
     }
     if(largura > 400){
-        main.style.height = "1400px"
+        main.style.height = "1384px"
         main.style.overflowY = "scroll"
         secao.style.height = "343px"
 

@@ -184,17 +184,14 @@ button{
 
 
 
-@media sreen and (max-width: 1024px) {
-    body{
-        height: 1384px;
-        overflow: scroll;
-    }
+@media (max-width: 800px) {
 
     .main{
         width: 768px;
-        height: 1174px;
+        height: 933px;
         top:2024px;
         left: -2277px;
+        overflow-y: auto;
     }
 
     .logo{  
@@ -210,7 +207,7 @@ button{
     }
     .cript_decript{
         width: 680px;
-        height: 600px;
+        height: 400px;
         top: 240px;
         left: 40px;
     }
@@ -229,7 +226,7 @@ button{
         position: fixed;
         width: 688px;
         height: 133px;
-        top: 960px;
+        top: 800px;
         left: 40px;
         border-radius: 32px;
         gap: 32px;
@@ -253,7 +250,7 @@ button{
         width: 624px;
         height: 69px;
         left: 40px;
-        top: 1001px;
+        top: 830px;
         gap: 16px;
         position: fixed;
     }
@@ -275,13 +272,13 @@ button{
         display: flex;
         width: 688px;
         height: 67px;
-        top: 870px;
+        top: 710px;
         left: 40px;
         gap: 24px;
     }
 
     .icone{
-        top: 836px;
+        top: 670px;
         left: 40px;
         gap: 8px;
     }
@@ -303,15 +300,13 @@ button{
 
 }
 @media (max-width: 400px) {
-    body{
-        height: 1715px;
-        overflow-y: scroll;
-    }
+ 
     .main{
         width: 375px;
-        height: 933px;
+        height: 600px;
         top: 3588px;
         left: -2277px;
+        overflow-y: auto;
     }
 
 
@@ -326,6 +321,10 @@ button{
     #txt_entrada{
         width: 90%;
         height: 60%;
+    }
+
+    .imagem_busca{
+        display: none;
     }
 
     .botoes{
@@ -343,6 +342,7 @@ button{
         width: 252px;
         height: 18px;
         top: 510px;
+        left: 32px;
         gap: 8px;
     }
 
@@ -364,8 +364,9 @@ button{
         width: 263px;
         height: 122px;
         gap: 16px;
-        padding: 10px;
+        padding: 30px 10px;
         top: 700px;
+        left: 32px;
     }
 
     .negrito{
