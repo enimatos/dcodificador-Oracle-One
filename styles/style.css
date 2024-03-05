@@ -168,6 +168,41 @@ button{
 }
 
 
+footer{
+    background-color: var(--cor-secundaria);
+    font-weight: 600;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+
+}
+
+ul{
+    display: flex;
+    gap: 40px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+li{
+    list-style:none;
+    
+}
+
+a{
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    font-family: var(--fonte_principal);
+    font-size: 1.1rem;
+}
+
+a:hover{
+    text-decoration:underline;
+}
 
 @media (max-width: 800px) {
 
