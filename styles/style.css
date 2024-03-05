@@ -37,6 +37,17 @@ body{
     justify-content: space-between;
 }
 
+.cabecalho{
+    display: flex;
+    position: absolute;
+    gap: 300px;
+    width: 60%;
+}
+
+.texto{
+    color: var(--cor-secundaria);
+    font-size: 5rem;
+}
 .frases{
     display: flex;
     flex-direction: column;

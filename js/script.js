@@ -13,15 +13,8 @@ const alphabeto = ["abcdefghijklmnopqrdtuvwxyz"]
 
 function criptografar(){
     let texto = campoEntrada.value;
-    // let resultado = ''
-
-    // for (let i in texto){
-    //     if (texto[i] in alphabeto){
-    //         texto[i].replace(matriz[i])
-    //         console.log(texto[i])
-    //     }
-    // }
-    let resultado = texto.replace(/a/g, "8=§").replace(/b/g, "Una").replace(/c/g,"J")
+ 
+    let resultado = texto.replace(/a/g, "8=§").replace(/b/g, "Una").replace(/c/g,"J4")
     .replace(/d/g,"<>").replace(/e/g,"#V").replace(/f/g,"@A").replace(/g/g,"<7>").replace(/h/g,"\/")
     .replace(/i/g,"%%").replace(/j/g,"enter").replace(/k/g,"ctr").replace(/l/g,"bº").replace(/m/g,"@!")
     .replace(/n/g,"Uend").replace(/o/g,"Te%a").replace(/p/g,"mD3").replace(/q/g,"ke&").replace(/r/g,"¨e5")
@@ -36,8 +29,8 @@ function criptografar(){
 
     }
     if (largura < 401){
-        // main.style.height = "1715px"
-        secao.style.height = "595px"
+        main.style.height = "1515px"
+        secao.style.height = "600px"
         main.style.overflow = "scroll"
    
     }
@@ -53,7 +46,7 @@ function criptografar(){
 function descriptografar(){
     let texto = campoEntrada.value;;
 
-    let resultadoDescriptografado = texto.replace(/8=§/g,"a").replace(/Una/g,"b").replace(/J/g,"c")
+    let resultadoDescriptografado = texto.replace(/8=§/g,"a").replace(/Una/g,"b").replace(/J4/g,"c")
     .replace(/<>/g, "d").replace(/#V/g, "e").replace(/@A/g,"f").replace(/<7>/g,"g").replace(/\//g,"h")
     .replace(/%%/g,"i").replace(/enter/g,"j").replace(/ctr/g,"k").replace(/bº/g,"l").replace(/@!/g,"m")
     .replace(/Uend/g,"n").replace(/Te%a/g,"o").replace(/mD3/g,"p").replace(/ke&/g,"q").replace(/¨e5/g,"r")
@@ -69,8 +62,9 @@ function descriptografar(){
 
     }
     if (largura < 401){
-        main.style.height = "1715px"
-        secao.style.height = "595px"
+        main.style.height = "1515px"
+        secao.style.height = "600px"
+        main.style.overflow = "scroll"
       
     }
     document.querySelector(".resultado").innerHTML = `<textarea readonly class="txt_saida" > ${resultadoDescriptografado}</textarea>
