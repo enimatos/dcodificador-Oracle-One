@@ -24,29 +24,21 @@ body{
 
 }
 
-.logo{  
-    width: 31.09px;
-    height: 46.37px;
-}
 
 .main{
-    height: 100vh;
+    height: 1000px;
     width: 1200px;
-    margin: 3% 15%;
+    margin: 3% auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.cabecalho{
-    display: flex;
-    position: absolute;
-    gap: 300px;
-    width: 60%;
-}
 
 .texto{
     color: var(--cor-secundaria);
-    font-size: 5rem;
+    font-size: 4rem;
+    position: absolute;
+    top:50px
 }
 .frases{
     display: flex;
@@ -61,7 +53,7 @@ body{
     width: 336px;
     height: 58px;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--cor-quinta);
     line-height: 28.8px;
     text-align: center;
@@ -72,7 +64,7 @@ body{
     width: 336px;
     height: 48px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height:24px;
     text-align: center;
     top: 680px;
@@ -83,15 +75,15 @@ body{
 }
 
 .imagem_busca{
-    width: 336px;
+    width: 90%;
     height: 304px;
 
 }
 
 .cript_decript{
     margin-top: 150px;
-    width: 700px;
-    height: 944px;    
+    width: 60%;
+    height: 70%;    
     font-weight: 400;
     font-size: 32px;
     line-height: 48px;
@@ -107,7 +99,7 @@ body{
     padding: 15px 0;
 }
 .aviso{
-    width: 228px;
+    width: 90%;
     height: 18px;
     opacity: 80%;
     font-size: 12px;
@@ -115,8 +107,8 @@ body{
     line-height: 18px;
 }
 .resultado{
-    width: 400px;
-    height: 944px;
+    width: 30%;
+    height: 78%;
     border-radius: 32px;
     background-color: var(--cor-terciaria);
     display: flex;
@@ -138,8 +130,8 @@ body{
 }
 .txt_saida{
     width: 85%;
-    height: 75%;
-    padding: 25px;
+    height: 70%;
+    padding: 15px;
     border: none;
     font-size: 24px;
     color: var(--cor_quarta);
@@ -150,14 +142,14 @@ body{
 
 
 .botoes{
-    width: 100%;
+    width: 90%;
     gap: 24px;
     display: flex;
     justify-content: space-between
     }
 
 .botoes_saida{
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -166,11 +158,12 @@ body{
 }
 
 button{
-    border-radius: 24px;
+    border-radius: 30px;
     font-size: 1.5rem;
     height: 67px;
     width: 300px;
     cursor: pointer;
+    margin: 0 5px;
 }
 
 .btn_criptografa{
@@ -205,41 +198,43 @@ li{
 }
 
 a{
-    color: var(--cor-terciaria);
     text-decoration: none;
-    font-family: var(--fonte_principal);
     font-size: 1.1rem;
 }
 
-a:hover{
-    text-decoration:underline;
+.rede{
+    height: 30px;
 }
 
-@media (max-width: 800px) {
+.rede:hover{
+    height: 35px;
+    
+}
+
+@media (max-width: 1200px) {
+    .main{
+        justify-content: center;
+    }
+}
+@media (max-width: 1000px) {
 
     .main{
-        width: 768px;
-        height: 1174px;
-        margin: 3% 5% 3% 5%;
+        width: 90%;
+        /* height: 1174px; */
+        margin: 3% auto;
         flex-direction: column;
-        justify-content: flex-start;
-        gap: 15px
-    }
-
-    .logo{  
-        width: 31.09px;
-        height: 46.37px;
-
-
+        align-items: center;
+        gap: 15px;
+        justify-content: inherit;
     }
 
     .imagem_busca{
         display: none;
     }
     .cript_decript{
-        width: 680px;
+        width: 90%;
         height: 50%;
-        margin-top: 110px;
+        margin-top: 120px;
     }
 
     #txt_entrada{
@@ -253,7 +248,7 @@ a:hover{
     .resultado{
         display: flex;
         flex-direction: column;
-        width: 688px;
+        width: 90%;
         height: 133px;
         border-radius: 32px;
         gap: 32px;
@@ -292,7 +287,7 @@ a:hover{
     }
     .botoes{
         display: flex;
-        width: 688px;
+        width: 100%;
         height: 67px;
         top: 710px;
         left: 40px;
@@ -321,7 +316,7 @@ a:hover{
 
 
 }
-@media (max-width: 400px) {
+@media (max-width: 530px) {
  
     .main{      
         width: 375px;
@@ -330,16 +325,17 @@ a:hover{
 
     }
 
+   
     .cript_decript{
         width: 343px;
-        height: 530px;
-        margin-top: 30px;
+        height: 650px;
+        margin-top: 150px;
 
     }
 
     #txt_entrada{
         width: 90%;
-        height: 60%;
+        height: 80%;
     }
 
     .imagem_busca{
@@ -350,8 +346,8 @@ a:hover{
         flex-direction: column;
         align-items: center;
         width: 343px;
-        height: 158px;
-        gap: 24px;
+        height: 140px;
+        gap: 15px;
     }
 
     .icone{

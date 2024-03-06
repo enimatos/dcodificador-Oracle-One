@@ -14,9 +14,9 @@ const alphabeto = ["abcdefghijklmnopqrdtuvwxyz"]
 function criptografar(){
     let texto = campoEntrada.value;
  
-    let resultado = texto.replace(/a/g, "8=§").replace(/b/g, "Una").replace(/c/g,"J4")
-    .replace(/d/g,"<>").replace(/e/g,"#V").replace(/f/g,"@A").replace(/g/g,"<7>").replace(/h/g,"\/")
-    .replace(/i/g,"%%").replace(/j/g,"enter").replace(/k/g,"ctr").replace(/l/g,"bº").replace(/m/g,"@!")
+    let resultado = texto.replace(/a/g, "8=§").replace(/b/g, "G=").replace(/c/g,"J4")
+    .replace(/d/g,"<>").replace(/e/g,"#V").replace(/f/g,"@A").replace(/g/g,"<7>").replace(/h/g,"0-")
+    .replace(/i/g,"%%").replace(/j/g,"::").replace(/k/g,"Ç6").replace(/l/g,"bº").replace(/m/g,"@!")
     .replace(/n/g,"Uend").replace(/o/g,"Te%a").replace(/p/g,"mD3").replace(/q/g,"ke&").replace(/r/g,"¨e5")
     .replace(/s/g,"!1").replace(/t/g,"5Y").replace(/u/g,"o#L").replace(/v/g,"oBa").replace(/w/g,"vish")
     .replace(/x/g,"gi}").replace(/y/g,"Qu°").replace(/z/g,"9f")
@@ -25,7 +25,7 @@ function criptografar(){
     if(largura > 400 && largura < 1200){
         main.style.height = "1384px"
         main.style.overflowY = "scroll"
-        secao.style.height = "343px"
+        secao.style.height = "550px"
 
     }
     if (largura < 401){
@@ -46,9 +46,9 @@ function criptografar(){
 function descriptografar(){
     let texto = campoEntrada.value;;
 
-    let resultadoDescriptografado = texto.replace(/8=§/g,"a").replace(/Una/g,"b").replace(/J4/g,"c")
-    .replace(/<>/g, "d").replace(/#V/g, "e").replace(/@A/g,"f").replace(/<7>/g,"g").replace(/\//g,"h")
-    .replace(/%%/g,"i").replace(/enter/g,"j").replace(/ctr/g,"k").replace(/bº/g,"l").replace(/@!/g,"m")
+    let resultadoDescriptografado = texto.replace(/8=§/g,"a").replace(/G=/g,"b").replace(/J4/g,"c")
+    .replace(/<>/g, "d").replace(/#V/g, "e").replace(/@A/g,"f").replace(/<7>/g,"g").replace(/0-/g,"h")
+    .replace(/%%/g,"i").replace(/::/g,"j").replace(/Ç6/g,"k").replace(/bº/g,"l").replace(/@!/g,"m")
     .replace(/Uend/g,"n").replace(/Te%a/g,"o").replace(/mD3/g,"p").replace(/ke&/g,"q").replace(/¨e5/g,"r")
     .replace(/!1/g,"s").replace(/5Y/g,"t").replace(/o#L/g,"u").replace(/oBa/g,"v").replace(/vish/g,"w")
     .replace(/gi}/g,"x").replace(/Qu°/g,"y").replace(/9f/g,"z")
@@ -57,13 +57,13 @@ function descriptografar(){
     if(largura > 400 && largura < 1200){
         main.style.height = "1384px"
         main.style.overflowY = "scroll"
-        secao.style.height = "343px"
+        secao.style.height = "600px"
 
 
     }
     if (largura < 401){
         main.style.height = "1515px"
-        secao.style.height = "600px"
+        secao.style.height = "500px"
         main.style.overflow = "scroll"
       
     }
@@ -88,10 +88,10 @@ function limpar(){
     campoEntrada.value = ""
 
     if(largura > 1200){
-         secao.style.height = "944px"
+         secao.style.height = "78%"
     }else if(largura > 400 && largura < 1200){
         main.style.height = "1174px"
-        secao.style.height = "186px"
+        secao.style.height = "133px"
     }else{
         main.style.height = "1715px"
         secao.style.height = "196px"    
